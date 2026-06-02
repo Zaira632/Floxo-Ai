@@ -1,0 +1,16 @@
+⬥ Injecting environment variable values for all scopes
+⬥ Ignored .env file env var: GROQ_API_KEY (defined in process)
+⬥ Ignored .env file env var: EMAIL_PASSWORD (defined in process)
+⬥ Injected .env file env vars: FINNHUB_API_KEY
+⬥ No app server detected. Using simple static server
+⬥ Running static server from "..\..\ui"
+⬥ Setting up local dev server
+
+⬥ Static server listening to 3999
+
+   ╭─────────────────────── ⬥  ────────────────────────╮
+   │                                                   │
+   │   Local dev server ready: http://localhost:8888   │
+   │                                                   │
+   ╰───────────────────────────────────────────────────╯
+

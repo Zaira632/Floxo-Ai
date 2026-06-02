@@ -1,0 +1,8 @@
+[build]
+  publish = "ui"
+
+# Redirect all paths to index.html for frontend routing support
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
