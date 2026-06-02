@@ -14,7 +14,7 @@ google-auth-oauthlib==1.2.0
 google-auth-httplib2==0.2.0
 google-api-python-client==2.107.0
 elevenlabs==0.2.25
-anthropic==0.7.11
+anthropic>=0.45.0
 moviepy==1.0.3
 pillow==10.1.0
 opencv-python==4.8.1.78
