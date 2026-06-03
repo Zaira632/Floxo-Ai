@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Floxo AI — AI Automation & Commercial Ads</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css" />
+    <style id="tooplate-css">
+body{background-color:#0a0a0a;color:#fff;font-family:'Segoe UI',sans-serif;}
+.tm-parallax{background-image:url('https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1800&q=80');background-size:cover;background-position:center top;background-attachment:fixed;min-height:100vh;display:flex;flex-direction:column;}
+.tm-parallax-2{background-image:url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1800&q=80');background-size:cover;background-position:center;background-attachment:fixed;position:relative;}
+.tm-bg-overlay{position:absolute;inset:0;background:rgba(5,15,2,0.82);z-index:0;}
+.tm-testimonials-content,.tm-container-contact{position:relative;z-index:1;}
+.tm-navbar{background:rgba(5,15,2,0.85)!important;backdrop-filter:blur(12px);padding:.8rem 0;border-bottom:1px solid rgba(124,192,59,0.2);position:sticky;top:0;z-index:999;transition:background .3s;}
+.tm-navbar.scroll{background:rgba(5,15,2,0.98)!important;}
+.nav-link{color:rgba(255,255,255,0.8)!important;font-weight:500;letter-spacing:.5px;transition:color .2s;}
+.nav-link:hover{color:#A8E04A!important;}
+.tm-hero-text-container{flex:1;display:flex;align-items:center;justify-content:center;padding:8rem 1rem 5rem;}
+.tm-font-big{font-size:1.1rem;}
+.tm-down-arrow-link{color:rgba(255,255,255,0.5);display:block;padding:2rem;text-align:center;}
+.tm-down-arrow{animation:bounce 2s infinite;}
+@keyframes bounce{0%,100%{transform:translateY(0);}50%{transform:translateY(8px);}}
+.tm-section-pad-top{padding:5rem 0;}
+.tm-content-box{margin-bottom:2rem;}
+.tm-intro-text-container{padding:1rem 0;}
+.tm-intro-text{color:rgba(255,255,255,0.7);line-height:1.75;}
+.tm-section-title{font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:800;}
+.tm-icon{color:#7CC03B;display:block;margin-top:.5rem;}
+.tm-btn-primary{display:inline-block;background:#7CC03B;color:#fff!important;padding:.65rem 1.8rem;border-radius:6px;font-weight:700;text-decoration:none!important;transition:all .3s;}
+.tm-btn-primary:hover{background:#A8E04A;transform:translateY(-2px);}
+.tm-testimonial-item{text-align:center;padding:1.5rem;}
+.tm-testimonial-item img{width:80px;height:80px;border-radius:50%;object-fit:cover;border:3px solid #7CC03B;margin:0 auto 1rem;display:block;}
+.tm-testimonial-item blockquote{font-size:.9rem;color:rgba(255,255,255,0.75);font-style:italic;line-height:1.7;margin-bottom:.8rem;}
+.tm-testimonial-item figcaption{color:#A8E04A;font-size:.82rem;font-weight:700;}
+.tm-container-gallery{max-width:1200px;}
+.tm-gallery-container{max-width:1100px;}
+.tm-gallery-item{position:relative;overflow:hidden;margin:6px;cursor:pointer;display:block;}
+.tm-gallery-item img{width:100%;height:200px;object-fit:cover;display:block;transition:transform .5s;}
+.tm-gallery-item:hover img{transform:scale(1.08);}
+.effect-honey figcaption{position:absolute;inset:0;background:rgba(10,40,5,0.75);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .4s;}
+.effect-honey:hover figcaption{opacity:1;}
+.effect-honey figcaption h2{color:#A8E04A;font-size:1rem;font-style:italic;text-align:center;}
+.effect-honey figcaption h2 span{color:#fff;}
+.tm-container-contact{max-width:900px;}
+.tm-input{width:100%;background:rgba(255,255,255,0.06);border:1px solid rgba(124,192,59,0.25);color:#fff;padding:.8rem 1rem;margin-bottom:1rem;border-radius:6px;font-size:.9rem;outline:none;transition:border-color .3s;}
+.tm-input:focus{border-color:#7CC03B;}
+.tm-input::placeholder{color:rgba(255,255,255,0.35);}
+.tm-btn-submit{background:#7CC03B;color:#fff;border:none;padding:.8rem 2.5rem;font-weight:700;border-radius:6px;cursor:pointer;transition:all .3s;font-size:.95rem;}
+.tm-btn-submit:hover{background:#A8E04A;transform:translateY(-2px);}
+.contact-item{display:flex;align-items:center;margin-bottom:1.5rem;}
+.item-link{display:flex;align-items:center;gap:1rem;text-decoration:none;color:rgba(255,255,255,0.7);transition:color .3s;font-size:.95rem;}
+.item-link:hover{color:#A8E04A;}
+.tm-footer{padding:2rem;background:rgba(0,0,0,0.4);color:rgba(255,255,255,0.4);font-size:.82rem;}
+.slick-dots li button:before{color:#7CC03B!important;}
+.slick-dots li.slick-active button:before{color:#A8E04A!important;}
+.navbar-toggler{border-color:rgba(124,192,59,0.5);}
+.navbar-toggler-icon{background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(168, 224, 74, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");}
+</style>
+    <style>
+      /* ── FLOXO AI CUSTOM OVERRIDES ── */
+      :root {
+        --green: #7CC03B;
+        --green-bright: #A8E04A;
+        --green-dim: rgba(124,192,59,0.12);
+        --green-border: rgba(124,192,59,0.3);
+      }
+
+      /* Navbar brand */
+      .navbar-brand {
+        font-size: 1.6rem !important;
+        font-weight: 800 !important;
+        letter-spacing: 2px;
+        color: #A8E04A !important;
+      }
+
+      /* Hero title & subtitle */
+      .tm-hero-title {
+        font-size: 3.2rem;
+        font-weight: 900;
+        line-height: 1.1;
+        text-shadow: 0 2px 20px rgba(0,0,0,0.6);
+      }
+      .tm-hero-subtitle {
+        font-size: 1.2rem;
+        color: rgba(255,255,255,0.85);
+        text-shadow: 0 1px 8px rgba(0,0,0,0.5);
+      }
+
+      /* Section title color */
+      .tm-text-primary { color: #7CC03B !important; }
+
+      /* Stats bar */
+      .floxo-stats {
+        display: flex;
+        justify-content: center;
+        gap: 3rem;
+        flex-wrap: wrap;
+        background: linear-gradient(135deg,#0A1A06,#0D2008);
+        padding: 3rem 2rem;
+        border-top: 2px solid rgba(124,192,59,0.3);
+        border-bottom: 2px solid rgba(124,192,59,0.3);
+      }
+      .floxo-stat { text-align: center; }
+      .floxo-stat-num {
+        font-size: 2.8rem;
+        font-weight: 900;
+        color: #A8E04A;
+        line-height: 1;
+        display: block;
+      }
+      .floxo-stat-label {
+        font-size: .78rem;
+        color: rgba(255,255,255,0.5);
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+      }
+
+      /* Service icons */
+      .tm-icon { color: #7CC03B; }
+
+      /* Video section */
+      .floxo-video-section {
+        background: #0A1A06;
+        padding: 5rem 0;
+        border-top: 1px solid rgba(124,192,59,0.2);
+      }
+      .floxo-video-center {
+        display: flex;
+        justify-content: center;
+        margin-top: 3rem;
+      }
+      .floxo-video-card {
+        background: rgba(255,255,255,0.03);
+        border: 1px solid rgba(124,192,59,0.25);
+        border-radius: 16px;
+        overflow: hidden;
+        transition: all .3s;
+        width: 360px;
+      }
+      .floxo-video-card:hover {
+        border-color: #A8E04A;
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+      }
+      .floxo-video-card video {
+        width: 100%;
+        aspect-ratio: 9/16;
+        object-fit: cover;
+        display: block;
+        background: #040D02;
+      }
+      .floxo-video-body { padding: 1.4rem 1.6rem 1.8rem; }
+      .floxo-video-badge {
+        display: inline-block;
+        background: rgba(124,192,59,0.12);
+        border: 1px solid rgba(124,192,59,0.3);
+        color: #A8E04A;
+        font-size: .7rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        padding: .3rem .9rem;
+        border-radius: 100px;
+        margin-bottom: .7rem;
+      }
+      .floxo-video-card h4 {
+        color: #fff;
+        font-size: 1.05rem;
+        font-weight: 700;
+        margin-bottom: .4rem;
+      }
+      .floxo-video-card p {
+        color: rgba(255,255,255,0.55);
+        font-size: .84rem;
+        line-height: 1.6;
+        margin: 0;
+      }
+
+      /* Profit proof section */
+      .floxo-proof {
+        background: #0D2008;
+        padding: 5rem 0;
+        border-top: 1px solid rgba(124,192,59,0.2);
+        border-bottom: 1px solid rgba(124,192,59,0.2);
+      }
+      .floxo-proof-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+      }
+      @media(max-width:768px){ .floxo-proof-grid{ grid-template-columns:1fr; } }
+      .floxo-proof-img-wrap {
+        position: relative;
+        border-radius: 16px;
+        overflow: hidden;
+        border: 1px solid rgba(124,192,59,0.4);
+        box-shadow: 0 20px 60px rgba(0,0,0,0.6), 0 0 40px rgba(124,192,59,0.05);
+      }
+      .floxo-proof-img-wrap img { width: 100%; display: block; }
+      .floxo-proof-caption {
+        position: absolute;
+        bottom: 0; left: 0; right: 0;
+        background: rgba(10,26,6,0.88);
+        backdrop-filter: blur(10px);
+        border-top: 1px solid rgba(124,192,59,0.3);
+        padding: 1rem 1.4rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .floxo-proof-caption-label { color: rgba(255,255,255,0.5); font-size: .7rem; text-transform: uppercase; letter-spacing: 1px; }
+      .floxo-proof-caption-val { color: #A8E04A; font-size: 1rem; font-weight: 800; }
+      .floxo-live { color: #28CA41; font-size: .72rem; font-weight: 700; display: flex; align-items: center; gap: .4rem; }
+      .floxo-live::before { content: ''; width: 7px; height: 7px; background: #28CA41; border-radius: 50%; animation: livepulse 1.5s infinite; }
+      @keyframes livepulse { 0%,100%{opacity:1;} 50%{opacity:.3;} }
+
+      .floxo-proof-stats {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        margin: 1.5rem 0;
+      }
+      .floxo-pstat {
+        background: rgba(255,255,255,0.03);
+        border: 1px solid rgba(124,192,59,0.2);
+        border-radius: 12px;
+        padding: 1.2rem;
+        border-top: 2px solid #7CC03B;
+      }
+      .floxo-pstat-val { color: #A8E04A; font-size: 1.8rem; font-weight: 900; line-height: 1; }
+      .floxo-pstat-label { color: rgba(255,255,255,0.4); font-size: .68rem; text-transform: uppercase; letter-spacing: 1px; margin-top: .3rem; }
+
+      .floxo-trade-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: rgba(255,255,255,0.03);
+        border: 1px solid rgba(255,255,255,0.07);
+        border-radius: 8px;
+        padding: .6rem 1rem;
+        margin-bottom: .5rem;
+      }
+      .floxo-trade-sym { color: #fff; font-weight: 700; font-size: .85rem; }
+      .floxo-trade-type { color: #A8E04A; background: rgba(124,192,59,0.1); padding: .2rem .6rem; border-radius: 100px; font-size: .7rem; font-weight: 600; }
+      .floxo-trade-pnl { color: #28CA41; font-weight: 800; font-size: .9rem; }
+
+      /* WhatsApp button */
+      .floxo-wa-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: .6rem;
+        background: linear-gradient(135deg,#25D366,#128C7E);
+        color: #fff !important;
+        padding: .9rem 2.2rem;
+        border-radius: 100px;
+        font-weight: 700;
+        font-size: .95rem;
+        text-decoration: none;
+        box-shadow: 0 8px 25px rgba(37,211,102,0.3);
+        transition: all .3s;
+        margin-top: 1rem;
+        display: inline-flex;
+      }
+      .floxo-wa-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 14px 35px rgba(37,211,102,0.45);
+        color: #fff !important;
+        text-decoration: none;
+      }
+
+      /* Testimonial text */
+      .tm-section-desc { color: rgba(255,255,255,0.7); }
+
+      /* Contact section */
+      #contact h2 { color: #A8E04A; }
+      .contact-item a { color: rgba(255,255,255,0.75); }
+      .contact-item a:hover { color: #A8E04A; }
+
+      /* Gallery caption */
+      .floxo-gallery-label {
+        text-align: center;
+        color: rgba(255,255,255,0.4);
+        font-size: .8rem;
+        margin-top: .5rem;
+      }
+
+      /* Section eyebrow */
+      .floxo-eyebrow {
+        display: inline-block;
+        font-size: .72rem;
+        font-weight: 700;
+        letter-spacing: 2.5px;
+        text-transform: uppercase;
+        color: #A8E04A;
+        border-left: 3px solid #7CC03B;
+        padding-left: .7rem;
+        margin-bottom: 1rem;
+      }
+
+      /* Proof right text */
+      .floxo-proof-title { color: #fff; font-size: 2rem; font-weight: 900; margin-bottom: .8rem; line-height: 1.15; }
+      .floxo-proof-title span { color: #A8E04A; }
+      .floxo-proof-desc { color: rgba(255,255,255,0.55); font-size: .9rem; line-height: 1.7; margin-bottom: 1.2rem; }
+    </style>
+  </head>
+  <body>    
+
+    <!-- ══════════ HERO ══════════ -->
+    <section id="infinite" class="text-white tm-font-big tm-parallax">
+      <nav class="navbar navbar-expand-md tm-navbar" id="tmNav">              
+        <div class="container">   
+          <div class="tm-next">
+            <a href="#infinite" class="navbar-brand">⚡ FLOXO AI</a>
+          </div>             
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars navbar-toggler-icon"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item"><a class="nav-link tm-nav-link" href="#infinite">Home</a></li>
+              <li class="nav-item"><a class="nav-link tm-nav-link" href="#whatwedo">Services</a></li>
+              <li class="nav-item"><a class="nav-link tm-nav-link" href="#testimonials">Results</a></li>
+              <li class="nav-item"><a class="nav-link tm-nav-link" href="#gallery">Our Work</a></li>
+              <li class="nav-item"><a class="nav-link tm-nav-link" href="#contact">Contact</a></li>                    
+            </ul>
+          </div>        
+        </div>
+      </nav>
+      
+      <div class="text-center tm-hero-text-container">
+        <div class="tm-hero-text-container-inner">
+          <h2 class="tm-hero-title">
+            Transform Your Brand Into A<br>
+            <span style="color:#A8E04A;">Smart AI Growth Machine</span>
+          </h2>
+          <p class="tm-hero-subtitle">
+            We build AI-powered automation systems &amp; create viral commercial ads<br>
+            that turn your business into a non-stop growth engine — 24/7
+          </p>
+          <div style="margin-top:2rem; display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+            <a href="https://wa.me/923032870749" class="floxo-wa-btn" style="margin-top:0;">
+              💬 WhatsApp Now
+            </a>
+            <a href="#whatwedo" style="display:inline-flex;align-items:center;gap:.5rem;border:2px solid rgba(124,192,59,0.5);color:#fff;padding:.85rem 2rem;border-radius:100px;font-weight:600;text-decoration:none;transition:all .3s;">
+              Explore Services →
+            </a>
+          </div>
+        </div>        
+      </div>
+
+      <div class="tm-next tm-intro-next">
+        <a href="#whatwedo" class="text-center tm-down-arrow-link">
+          <i class="fas fa-2x fa-arrow-down tm-down-arrow"></i>
+        </a>
+      </div>      
+    </section>
+
+    <!-- ══════════ STATS BAR ══════════ -->
+    <div class="floxo-stats">
+      <div class="floxo-stat">
+        <span class="floxo-stat-num">500+</span>
+        <span class="floxo-stat-label">Projects Done</span>
+      </div>
+      <div class="floxo-stat">
+        <span class="floxo-stat-num">98%</span>
+        <span class="floxo-stat-label">Client Satisfaction</span>
+      </div>
+      <div class="floxo-stat">
+        <span class="floxo-stat-num">12M+</span>
+        <span class="floxo-stat-label">Views Generated</span>
+      </div>
+      <div class="floxo-stat">
+        <span class="floxo-stat-num">48h</span>
+        <span class="floxo-stat-label">Fast Delivery</span>
+      </div>
+    </div>
+
+    <!-- ══════════ SERVICES ══════════ -->
+    <section id="whatwedo" class="tm-section-pad-top">
+      <div class="container">
+
+        <div class="row tm-content-box">
+          <div class="col-lg-12 col-xl-12">
+            <div class="tm-intro-text-container">
+              <div class="floxo-eyebrow">What We Do</div>
+              <h2 class="tm-text-primary mb-4 tm-section-title">Our Core Services</h2>
+              <p class="mb-4 tm-intro-text">
+                We combine cutting-edge AI technology with creative production to deliver results your competitors simply can't match. From full business automation to viral video ads — we do it all under one roof.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row tm-content-box">
+          <div class="col-lg-1">
+            <i class="fas fa-3x fa-robot text-center tm-icon"></i>
+          </div>
+          <div class="col-lg-5">
+            <div class="tm-intro-text-container">
+              <h2 class="tm-text-primary mb-4">AI Business Automation</h2>
+              <p class="mb-4 tm-intro-text">
+                We automate your entire business — lead generation, CRM, follow-ups, reporting — using advanced AI workflows (n8n, Make, Zapier). Your business runs 24/7 without you lifting a finger.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-1">
+            <i class="fas fa-3x fa-film text-center tm-icon"></i>
+          </div>
+          <div class="col-lg-5">
+            <div class="tm-intro-text-container">
+              <h2 class="tm-text-primary mb-4">Commercial Ads & Reels</h2>
+              <p class="mb-4 tm-intro-text">
+                High-impact video ads and social reels crafted to stop the scroll and drive real sales. AI-enhanced production at cinematic quality — delivered in 48 hours.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row tm-content-box">
+          <div class="col-lg-1">
+            <i class="fas fa-3x fa-chart-line text-center tm-icon"></i>
+          </div>
+          <div class="col-lg-5">
+            <div class="tm-intro-text-container">
+              <h2 class="tm-text-primary mb-4">Viral Content Strategy</h2>
+              <p class="mb-4 tm-intro-text">
+                Data-driven content calendars, viral hooks, and platform algorithms decoded to grow your audience on autopilot — Instagram, TikTok, YouTube, Facebook.
+              </p>
+              <div class="tm-continue">
+                <a href="#contact" class="tm-intro-text tm-btn-primary">Get Started</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-1">
+            <i class="fas fa-3x fa-magic text-center tm-icon"></i>
+          </div>
+          <div class="col-lg-5">
+            <div class="tm-intro-text-container">
+              <h2 class="tm-text-primary mb-4">AI-Enhanced Video Editing</h2>
+              <p class="mb-4 tm-intro-text">
+                Professional editing supercharged by AI — smart cuts, auto captions, motion graphics, color grading. First draft in 48 hours, unlimited revisions until you're satisfied.
+              </p>
+              <div class="tm-continue">
+                <a href="https://wa.me/923032870749" class="tm-intro-text tm-btn-primary">WhatsApp Us</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════ OUR VIDEOS ══════════ -->
+    <section class="floxo-video-section">
+      <div class="container">
+        <div class="text-center">
+          <div class="floxo-eyebrow">Our Work in Action</div>
+          <h2 class="tm-text-primary tm-section-title mb-3">See What We Create</h2>
+          <p style="color:rgba(255,255,255,0.5);max-width:500px;margin:0 auto;">
+            Real production samples — the kind of content we deliver for your brand every week.
+          </p>
+        </div>
+        <div class="floxo-video-center">
+          <div class="floxo-video-card">
+            <video controls muted loop playsinline>
+              <source src="AI_video_generation_for_business_202604291021.mp4" type="video/mp4">
+            </video>
+            <div class="floxo-video-body">
+              <span class="floxo-video-badge">🤖 AI Production</span>
+              <h4>AI Video Generation for Business</h4>
+              <p>Fully AI-generated commercial-grade videos — no camera needed. Automated scripts, voiceover, visuals, and editing.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ PROOF / RESULTS ══════════ -->
+    <section class="floxo-proof">
+      <div class="container">
+        <div class="floxo-proof-grid">
+
+          <div>
+            <div class="floxo-proof-img-wrap">
+              <img src="20_APRIL_PROFIT.png" alt="Verified Trading Profit April 20">
+              <div class="floxo-proof-caption">
+                <div>
+                  <div class="floxo-proof-caption-label">Verified Results</div>
+                  <div class="floxo-proof-caption-val">April 20 — XAU/USD</div>
+                </div>
+                <div class="floxo-live">VERIFIED PROFIT</div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="floxo-eyebrow">Proven Performance</div>
+            <div class="floxo-proof-title">Real Trades.<br><span>Real Profit.</span></div>
+            <div class="floxo-proof-desc">
+              Our AI-powered systems don't just look good — they perform. Here's a snapshot of verified closed trades from a single day using our AI trading signals.
+            </div>
+            <div class="floxo-proof-stats">
+              <div class="floxo-pstat">
+                <div class="floxo-pstat-val">+$457</div>
+                <div class="floxo-pstat-label">Single Day Profit</div>
+              </div>
+              <div class="floxo-pstat">
+                <div class="floxo-pstat-val">6+</div>
+                <div class="floxo-pstat-label">Winning Trades</div>
+              </div>
+              <div class="floxo-pstat">
+                <div class="floxo-pstat-val">100%</div>
+                <div class="floxo-pstat-label">Win Rate Apr 20</div>
+              </div>
+              <div class="floxo-pstat">
+                <div class="floxo-pstat-val">XAU/USD</div>
+                <div class="floxo-pstat-label">Instrument</div>
+              </div>
+            </div>
+            <div class="floxo-trade-row">
+              <span class="floxo-trade-sym">XAU/USD</span>
+              <span class="floxo-trade-type">Buy</span>
+              <span class="floxo-trade-pnl">+$205.74</span>
+            </div>
+            <div class="floxo-trade-row">
+              <span class="floxo-trade-sym">XAU/USD</span>
+              <span class="floxo-trade-type">Buy</span>
+              <span class="floxo-trade-pnl">+$134.91</span>
+            </div>
+            <div class="floxo-trade-row">
+              <span class="floxo-trade-sym">XAU/USD</span>
+              <span class="floxo-trade-type">Buy</span>
+              <span class="floxo-trade-pnl">+$99.33</span>
+            </div>
+            <div class="floxo-trade-row">
+              <span class="floxo-trade-sym">XAU/USD</span>
+              <span class="floxo-trade-type">Buy</span>
+              <span class="floxo-trade-pnl">+$8.65</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ TESTIMONIALS ══════════ -->
+    <section id="testimonials" class="tm-section-pad-top tm-parallax-2">      
+      <div class="container tm-testimonials-content">
+        <div class="row">
+          <div class="col-lg-12 tm-content-box">
+            <div class="floxo-eyebrow" style="display:block;text-align:center;border-left:none;padding-left:0;">Client Results</div>
+            <h2 class="text-white text-center mb-4 tm-section-title">Real Brands. Real Growth.</h2>
+            <p class="mx-auto tm-section-desc text-center">
+              Don't take our word for it — our clients' results speak louder than any claim we could make.
+            </p>
+            <div class="mx-auto tm-gallery-container tm-gallery-container-2">
+              <div class="tm-testimonials-carousel">
+
+                <figure class="tm-testimonial-item">
+                  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80&auto=format&fit=crop&crop=face" alt="Ahmed Khan" class="img-fluid mx-auto">
+                  <blockquote>"Our product reel hit 800K views in the first week. ROI was incredible — best investment we made for our brand this year."</blockquote>
+                  <figcaption>Ahmed Khan — E-commerce Brand Owner</figcaption>
+                </figure>
+
+                <figure class="tm-testimonial-item">
+                  <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=200&q=80&auto=format&fit=crop&crop=face" alt="Sara Farooq" class="img-fluid mx-auto">
+                  <blockquote>"The AI automation saved us 30+ hours per week. Lead follow-ups, reporting — all automatic. Total game changer for our agency."</blockquote>
+                  <figcaption>Sara Farooq — Marketing Agency Owner</figcaption>
+                </figure>
+
+                <figure class="tm-testimonial-item">
+                  <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&q=80&auto=format&fit=crop&crop=face" alt="M. Raza" class="img-fluid mx-auto">
+                  <blockquote>"2K to 85K followers in 4 months. Their content system is not luck — it's a proven science. Highly recommend Floxo AI."</blockquote>
+                  <figcaption>M. Raza — Restaurant Chain Owner</figcaption>
+                </figure>
+
+                <figure class="tm-testimonial-item">
+                  <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&q=80&auto=format&fit=crop&crop=face" alt="Bilal Ahmed" class="img-fluid mx-auto">
+                  <blockquote>"The commercial ad they made for us went viral on TikTok. 1.2 million views in 3 days. Sales doubled that month. Amazing team!"</blockquote>
+                  <figcaption>Bilal Ahmed — Fashion Brand Owner</figcaption>
+                </figure>
+
+                <figure class="tm-testimonial-item">
+                  <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&q=80&auto=format&fit=crop&crop=face" alt="Zara Sheikh" class="img-fluid mx-auto">
+                  <blockquote>"n8n automation setup they built saves us PKR 80,000/month in manual work. Best decision we made. Floxo AI delivers on every promise."</blockquote>
+                  <figcaption>Zara Sheikh — Real Estate Agency</figcaption>
+                </figure>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tm-bg-overlay"></div>
+    </section>
+    
+    <!-- ══════════ GALLERY / PORTFOLIO ══════════ -->
+    <section id="gallery" class="tm-section-pad-top">
+      <div class="container tm-container-gallery">
+        <div class="row">
+          <div class="text-center col-12">
+            <div class="floxo-eyebrow" style="display:block;text-align:center;border-left:none;padding-left:0;">Portfolio</div>
+            <h2 class="tm-text-primary tm-section-title mb-4">Our Work</h2>
+            <p class="mx-auto tm-section-desc">
+              A glimpse of what we create for brands — AI automation setups, viral reels, commercial ads, and brand campaigns that drive real growth.
+            </p>
+          </div>            
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="mx-auto tm-gallery-container">
+              <div class="grid tm-gallery">
+                <a href="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&q=90">
+                  <figure class="effect-honey tm-gallery-item">
+                    <img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=500&q=80&auto=format&fit=crop" alt="AI Trading" class="img-fluid">
+                    <figcaption><h2><i>AI <span>Trading</span></i></h2></figcaption>
+                  </figure>
+                </a>
+                <a href="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&q=90">
+                  <figure class="effect-honey tm-gallery-item">
+                    <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=500&q=80&auto=format&fit=crop" alt="n8n Workflow" class="img-fluid">
+                    <figcaption><h2><i>n8n <span>Workflow</span></i></h2></figcaption>
+                  </figure>
+                </a>
+                <a href="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=90">
+                  <figure class="effect-honey tm-gallery-item">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&q=80&auto=format&fit=crop" alt="Profit Results" class="img-fluid">
+                    <figcaption><h2><i>Profit <span>Results</span></i></h2></figcaption>
+                  </figure>
+                </a>
+                <a href="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1200&q=90">
+                  <figure class="effect-honey tm-gallery-item">
+                    <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=500&q=80&auto=format&fit=crop" alt="Claude Code" class="img-fluid">
+                    <figcaption><h2><i>Claude <span>Code AI</span></i></h2></figcaption>
+                  </figure>
+                </a>
+                <a href="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=1200&q=90">
+                  <figure class="effect-honey tm-gallery-item">
+                    <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=500&q=80&auto=format&fit=crop" alt="XAU/USD Signals" class="img-fluid">
+                    <figcaption><h2><i>XAU/USD <span>Signals</span></i></h2></figcaption>
+                  </figure>
+                </a>
+                <a href="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&q=90">
+                  <figure class="effect-honey tm-gallery-item">
+                    <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=500&q=80&auto=format&fit=crop" alt="AI Automation" class="img-fluid">
+                    <figcaption><h2><i>AI <span>Automation</span></i></h2></figcaption>
+                  </figure>
+                </a>
+                <a href="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&q=90">
+                  <figure class="effect-honey tm-gallery-item">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&q=80&auto=format&fit=crop" alt="AI Workflow" class="img-fluid">
+                    <figcaption><h2><i>AI <span>Workflow</span></i></h2></figcaption>
+                  </figure>
+                </a>
+                <a href="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=90">
+                  <figure class="effect-honey tm-gallery-item">
+                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=500&q=80&auto=format&fit=crop" alt="Gold Trading" class="img-fluid">
+                    <figcaption><h2><i>Gold <span>Trading</span></i></h2></figcaption>
+                  </figure>
+                </a>
+              </div>
+            </div>                
+          </div>        
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ CONTACT ══════════ -->
+    <section id="contact" class="tm-section-pad-top tm-parallax-2">
+      <div class="container tm-container-contact">
+        <div class="row">
+          <div class="text-center col-12">
+            <h2 class="tm-section-title mb-4" style="color:#A8E04A;">Let's Build Something Extraordinary</h2>
+            <p class="mb-5">
+              Ready to grow your brand with AI? Book a free 30-minute strategy call and we'll show you exactly how Floxo AI can transform your business.
+            </p>
+            <a href="https://wa.me/923032870749" class="floxo-wa-btn" style="margin-bottom:2.5rem;">
+              💬 WhatsApp: 0303-2870749
+            </a>
+            <br><br>
+          </div>
+          
+          <div class="col-sm-12 col-md-6">
+            <form action="" method="get">
+              <input id="name" name="name" type="text" placeholder="Your Name" class="tm-input" required />
+              <input id="email" name="email" type="email" placeholder="Your Email" class="tm-input" required />
+              <textarea id="message" name="message" rows="8" placeholder="Tell us about your project..." class="tm-input" required></textarea>
+              <button type="submit" class="btn tm-btn-submit">Send Message</button>
+            </form>
+          </div>
+          
+          <div class="col-sm-12 col-md-6">
+            <div class="contact-item">
+              <a href="https://wa.me/923032870749" class="item-link">
+                <i class="fab fa-2x fa-whatsapp mr-4" style="color:#25D366;"></i>
+                <span class="mb-0">0303-2870749</span>
+              </a>              
+            </div>
+            <div class="contact-item">
+              <a href="mailto:floxoai@gmail.com" class="item-link">
+                <i class="far fa-2x fa-envelope mr-4"></i>
+                <span class="mb-0">floxoai@gmail.com</span>
+              </a>              
+            </div>
+            <div class="contact-item">
+              <a href="#" class="item-link">
+                <i class="fab fa-2x fa-instagram mr-4" style="color:#E1306C;"></i>
+                <span class="mb-0">@floxoai</span>
+              </a>              
+            </div>
+            <div class="contact-item">
+              <a href="#" class="item-link">
+                <i class="fab fa-2x fa-tiktok mr-4"></i>
+                <span class="mb-0">@floxoai</span>
+              </a>              
+            </div>
+            <div class="contact-item">&nbsp;</div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="text-center small tm-footer">
+        <p class="mb-0">
+          © 2026 Floxo AI — AI Automation & Commercial Ads. All rights reserved.
+        </p>
+      </footer>
+    </section>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+         
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.bundle.min.js"></script> 
+    <script>
+      function getOffSet(){
+        var _offset = 450;
+        var windowHeight = window.innerHeight;
+        if(windowHeight > 500) { _offset = 400; } 
+        if(windowHeight > 680) { _offset = 300; }
+        if(windowHeight > 830) { _offset = 210; }
+        return _offset;
+      }
+      function setParallaxPosition($doc, multiplier, $object){
+        var offset = getOffSet();
+        var from_top = $doc.scrollTop(),
+          bg_css = 'center ' +(multiplier * from_top - offset) + 'px';
+        $object.css({"background-position" : bg_css });
+      }
+      var background_image_parallax = function($object, multiplier, forceSet){
+        multiplier = typeof multiplier !== 'undefined' ? multiplier : 0.5;
+        multiplier = 1 - multiplier;
+        var $doc = $(document);
+        if(forceSet) {
+          setParallaxPosition($doc, multiplier, $object);
+        } else {
+          $(window).scroll(function(){          
+            setParallaxPosition($doc, multiplier, $object);
+          });
+        }
+      };
+      var background_image_parallax_2 = function($object, multiplier){
+        multiplier = typeof multiplier !== 'undefined' ? multiplier : 0.5;
+        multiplier = 1 - multiplier;
+        var $doc = $(document);
+        $object.css({"background-attachment" : "fixed"});
+        $(window).scroll(function(){
+          if($(window).width() > 768) {
+            var firstTop = $object.offset().top,
+                pos = $(window).scrollTop(),
+                yPos = Math.round((multiplier * (firstTop - pos)) - 186);              
+            var bg_css = 'center ' + yPos + 'px';
+            $object.css({"background-position" : bg_css });
+          } else {
+            $object.css({"background-position" : "center" });
+          }
+        });
+      };
+      
+      $(function(){
+        background_image_parallax($(".tm-parallax"), 0.30, false);
+        background_image_parallax_2($("#contact"), 0.80);   
+        background_image_parallax_2($("#testimonials"), 0.80);   
+        window.addEventListener('resize', function(){
+          background_image_parallax($(".tm-parallax"), 0.30, true);
+        }, true);
+        $(window).scroll(function(e){          
+          if($(document).scrollTop() > 120) {
+            $('.tm-navbar').addClass("scroll");
+          } else {
+            $('.tm-navbar').removeClass("scroll");
+          }
+        });
+        $('#tmNav a').on('click', function(){
+          $('.navbar-collapse').removeClass('show'); 
+        });
+                
+        $("a").on('click', function(event) {
+          if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+            $('html, body').animate({
+              scrollTop: $(hash).offset().top
+            }, 600, 'easeInOutExpo', function(){
+              window.location.hash = hash;
+            });
+          }
+        });
+        $('.tm-gallery').magnificPopup({
+          delegate: 'a',
+          type: 'image',
+          gallery: { enabled: true }
+        });
+        $('.tm-testimonials-carousel').slick({
+          dots: true,
+          prevArrow: false,
+          nextArrow: false,
+          infinite: false,
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          responsive: [
+            { breakpoint: 992, settings: { slidesToShow: 2 } },
+            { breakpoint: 768, settings: { slidesToShow: 2 } }, 
+            { breakpoint: 480, settings: { slidesToShow: 1 } }
+          ]
+        });
+        $('.tm-gallery').slick({
+          dots: true,
+          infinite: false,
+          slidesToShow: 5,
+          slidesToScroll: 2,
+          responsive: [
+            { breakpoint: 1199, settings: { slidesToShow: 4, slidesToScroll: 2 } },
+            { breakpoint: 991, settings: { slidesToShow: 3, slidesToScroll: 2 } },
+            { breakpoint: 767, settings: { slidesToShow: 2, slidesToScroll: 1 } },
+            { breakpoint: 480, settings: { slidesToShow: 1, slidesToScroll: 1 } }
+          ]
+        });
+      });
+    </script>
+  </body>
+</html>
